@@ -1,9 +1,21 @@
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Profile from "./pages/Profile.jsx";
+import SignIn from "./pages/SignIn.jsx";
+import SignOut from "./pages/SignOut.jsx";
+import About from "./pages/About.jsx";
+
 function App() {
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-blue-500 text-white">
-      <h1 className="text-4xl font-bold">Tailwind CSS Works! 🎉</h1>
-      <p className="mt-4 text-lg">If you see a blue background, it's working!</p>
-    </div>
+   <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/SignIn" element={<SignIn />} />
+      <Route path="/SignOut" element={<SignOut />} />
+      <Route path="/About" element={<About />} />
+    </Routes>
+   </Router>
   )
 }
 
